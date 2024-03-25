@@ -1,5 +1,6 @@
 package com.application.rest.entities;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.*;
 
@@ -28,8 +29,10 @@ public class Product {
     /* Relacionar las tablas Maker y Product (1,N)
      * JoinColumn = Nombre de la clave foranea que se va a crear para la relacion.
      * Nullable = Para que siempre exista la relacion.
+     * JsonIgnore = Ignorar la serializacion.
      */
     @ManyToOne
     @JoinColumn(name = "id_fabricante", nullable = false)
+    @JsonIgnore
     private Maker maker;
 }

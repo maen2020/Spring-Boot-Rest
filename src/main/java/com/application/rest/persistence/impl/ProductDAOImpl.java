@@ -14,7 +14,7 @@ import java.util.Optional;
 Definir esta clase como componente.
 */
 @Component
-public class ProductDAOimpl implements IProductDAO {
+public class ProductDAOImpl implements IProductDAO {
 
     //Inyectar el repositorio de ProductRepository.
     @Autowired
